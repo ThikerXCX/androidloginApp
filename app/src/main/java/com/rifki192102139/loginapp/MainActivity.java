@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 _id = _idEditText.getText().toString();
                 _password = _passwordEditText.getText().toString();
 
-                _url = "https://tonywijaya.000webhostapp.com/011100862/login.php?id=" + _id + "&password="+_password;
+                _url = "https://stmikpontianak.net/011100862/login.php?id=" + _id + "&password="+_password;
 
                 asyncHttpClient = new AsyncHttpClient();
                 asyncHttpClient.get(_url, new AsyncHttpResponseHandler() {
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                         String hasil = new String(responseBody);
 
                         if (!hasil.equals("[{\"idCount\":\"1\"}]")){
-                            Toast.makeText(getApplicationContext(),"ID dan Passweod tidak cocok",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"ID dan Password tidak cocok",Toast.LENGTH_LONG).show();
                             return;
                         }
                         Toast.makeText(getApplicationContext(),"Selamat Datang "+_id,Toast.LENGTH_LONG).show();
