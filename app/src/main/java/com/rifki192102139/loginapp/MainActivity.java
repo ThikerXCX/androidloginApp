@@ -1,6 +1,7 @@
 package com.rifki192102139.loginapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,12 +21,14 @@ public class MainActivity extends AppCompatActivity {
     private EditText _idEditText,_passwordEditText;
     private Intent _menuIntent;
     private String _id,_password,_url;
+    private RecyclerView _recyclerView1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        _recyclerView1 =  (RecyclerView) findViewById(R.id.recyclerView1);
         _loginBtn = (Button) findViewById(R.id.loginBtn);
         _loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
